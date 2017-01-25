@@ -29,6 +29,45 @@
 <body>
 
 <h2 align="center">{{ t.topic_text }}</h2>
+<h3 align="center">by:{{ t.user.user_name }}</h3>
+
+<br><br>
+<div class="container jumbotron">
+<ul>
+    {% if t.opinion_set.all %}
+        {% for i in t.opinion_set.all %}
+            <li>{{ i.opinion_text }}<i><br>by:{{ i.user.user_name }}</i></li>
+        {% endfor %}
+    {% else %}
+        <li>No opinions on this topic yet.
+    {% endif %}
+</ul>
+</div>
+
+<!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <h3> <b> FOR ANY PROBLEMS CONTACT: </b><br>
+                        Sebin Duke Stephan
+                    </h3>
+                    <ul class="list-unstyled">
+                        <li><i class="fa fa-phone fa-fw"></i>+91 9868075098</li>
+                        <li><i class="fa fa-envelope-o fa-fw"></i>
+			<a href="mailto:sebindukestephan@gmail.com">sebindukestephan@gmail.com</a>
+                        </li>
+                    </ul>
+                    <br>
+                    <hr class="small">
+                    <p class="text-muted">Copyright &copy; TheTalkSquare </p>
+                </div>
+            </div>
+        </div>
+        <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
+    </footer>
+
+
 
 </body>
 </html>

@@ -24,3 +24,13 @@ class Topic(models.Model):
 
     def __str__(self):
         return self.topic_text
+
+class Opinion(models.Model):
+    user = models.ForeignKey(Users, on_delete=models.CASCADE)
+    topic=models.ForeignKey(Topic,on_delete=models.CASCADE)
+    opinion_text=models.CharField(max_length=500)
+    upvotes = models.IntegerField(default=0)
+    downvotes = models.IntegerField(default=0)
+
+    def __str__(self):
+        return self.user.user_name
