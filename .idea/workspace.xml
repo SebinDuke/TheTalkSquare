@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34688021-7dd5-4d1d-8635-f221a2a3768a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/0a722128-2d8b-4f27-bd4d-751726ff1551.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/0a722128-2d8b-4f27-bd4d-751726ff1551.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/admin.py" afterPath="$PROJECT_DIR$/main/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/models.py" afterPath="$PROJECT_DIR$/main/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/forms.py" afterPath="$PROJECT_DIR$/main/forms.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/templates/Temp/Topic.html" afterPath="$PROJECT_DIR$/main/templates/Temp/Topic.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/templates/Temp/logged.html" afterPath="$PROJECT_DIR$/main/templates/Temp/logged.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/urls.py" afterPath="$PROJECT_DIR$/main/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/views.py" afterPath="$PROJECT_DIR$/main/views.py" />
     </list>
     <ignored path="TheTalkSquare.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,8 +42,8 @@
       <file leaf-file-name="logged.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/templates/Temp/logged.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-612">
-              <caret line="66" column="39" selection-start-line="66" selection-start-column="39" selection-end-line="66" selection-end-column="39" />
+            <state relative-caret-position="240">
+              <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -59,12 +59,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Topic.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Topic.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/templates/Temp/Topic.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="41" column="42" selection-start-line="41" selection-start-column="42" selection-end-line="41" selection-end-column="42" />
-              <folding />
+            <state relative-caret-position="510">
+              <caret line="61" column="6" selection-start-line="61" selection-start-column="6" selection-end-line="61" selection-end-column="6" />
+              <folding>
+                <element signature="n#style#0;n#input#0;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -81,11 +83,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="48" selection-start-line="23" selection-start-column="48" selection-end-line="24" selection-end-column="0" />
+            <state relative-caret-position="402">
+              <caret line="105" column="93" selection-start-line="105" selection-start-column="93" selection-end-line="105" selection-end-column="93" />
               <folding>
                 <element signature="e#0#53#0" expanded="true" />
               </folding>
@@ -93,11 +95,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="32" column="60" selection-start-line="32" selection-start-column="60" selection-end-line="32" selection-end-column="60" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/forms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
+            <state relative-caret-position="270">
+              <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -106,8 +118,8 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="477">
-              <caret line="35" column="34" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
+            <state relative-caret-position="387">
+              <caret line="29" column="59" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -123,16 +135,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="35" column="33" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
@@ -143,14 +145,14 @@
       <list>
         <option value="$PROJECT_DIR$/main/templates/Temp/main.html" />
         <option value="$PROJECT_DIR$/main/static/css/stylish-portfolio.css" />
-        <option value="$PROJECT_DIR$/main/forms.py" />
         <option value="$PROJECT_DIR$/main/templates/Temp/login.html" />
-        <option value="$PROJECT_DIR$/main/urls.py" />
-        <option value="$PROJECT_DIR$/main/views.py" />
         <option value="$PROJECT_DIR$/main/models.py" />
         <option value="$PROJECT_DIR$/main/admin.py" />
         <option value="$PROJECT_DIR$/main/templates/Temp/logged.html" />
+        <option value="$PROJECT_DIR$/main/urls.py" />
+        <option value="$PROJECT_DIR$/main/forms.py" />
         <option value="$PROJECT_DIR$/main/templates/Temp/Topic.html" />
+        <option value="$PROJECT_DIR$/main/views.py" />
       </list>
     </option>
   </component>
@@ -232,54 +234,14 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Temp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TheTalkSquare" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TheTalkSquare" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TheTalkSquare" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TheTalkSquare" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="TheTalkSquare" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -562,11 +524,11 @@
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19347496" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19650987" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32888147" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962063" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -954,37 +916,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/urls.py">
+    <entry file="file://$PROJECT_DIR$/main/templates/Temp/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="35" column="33" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="33" />
+        <state relative-caret-position="570">
+          <caret line="38" column="44" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="35" column="34" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="48" selection-start-line="23" selection-start-column="48" selection-end-line="24" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#53#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -998,27 +934,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/templates/Temp/login.html">
+    <entry file="file://$PROJECT_DIR$/main/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="44" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
+        <state relative-caret-position="387">
+          <caret line="29" column="59" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="59" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/templates/Temp/logged.html">
+    <entry file="file://$PROJECT_DIR$/main/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-612">
-          <caret line="66" column="39" selection-start-line="66" selection-start-column="39" selection-end-line="66" selection-end-column="39" />
+        <state relative-caret-position="270">
+          <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/templates/Temp/Topic.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" column="42" selection-start-line="41" selection-start-column="42" selection-end-line="41" selection-end-column="42" />
+        <state relative-caret-position="510">
+          <caret line="61" column="6" selection-start-line="61" selection-start-column="6" selection-end-line="61" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/templates/Temp/logged.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="32" column="60" selection-start-line="32" selection-start-column="60" selection-end-line="32" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="105" column="93" selection-start-line="105" selection-start-column="93" selection-end-line="105" selection-end-column="93" />
+          <folding>
+            <element signature="e#0#53#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

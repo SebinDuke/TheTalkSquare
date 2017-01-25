@@ -27,21 +27,38 @@
 
 </head>
 <body>
+<br><br><br>
 
-<h2 align="center">{{ t.topic_text }}</h2>
-<h3 align="center">by:{{ t.user.user_name }}</h3>
-
-<br><br>
 <div class="container jumbotron">
-<ul>
-    {% if t.opinion_set.all %}
-        {% for i in t.opinion_set.all %}
-            <li>{{ i.opinion_text }}<i><br>by:{{ i.user.user_name }}</i></li>
-        {% endfor %}
-    {% else %}
-        <li>No opinions on this topic yet.
-    {% endif %}
-</ul>
+    <h2 align="center">{{ t.topic_text }} <i>by:{{ t.user.user_name }}</i></h2>
+
+    <br><br>
+    <ul>
+        {% if t.opinion_set.all %}
+            {% for i in t.opinion_set.all %}
+                <li>{{ i.opinion_text }}<i><br>by:{{ i.user.user_name }}</i></li>
+            {% endfor %}
+        {% else %}
+            <li>No opinions on this topic yet.
+        {% endif %}
+    </ul>
+
+    <div class="modal-body">
+      <form class="form" method="POST" action="{% url 'main:addopinion' %}" >
+        {% csrf_token %}
+
+          <div class="row">
+        <div class="form-group col-sm-10">
+          <input type="text" class="form-control input-lg" name="opinion_text" placeholder="Give your valuable opinion here:" required>
+        </div>
+
+        <div class="form-group col-sm-2">
+          <button class="btn btn-warning btn-lg btn-block">Add opinion</button>
+        </div>
+              <input name="topic" value="{{ t.id }}" style="visibility: hidden">
+        </div>
+      </form>
+    </div>
 </div>
 
 <!-- Footer -->

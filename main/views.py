@@ -8,8 +8,8 @@ from django.urls import reverse
 #from django.core.urlresolvers import reverse
 
 
-from .models import Users,Topic
-from main.forms import SignupForm,LoginForm,AddTopicForm
+from .models import Users,Topic,Opinion
+from main.forms import SignupForm,LoginForm,AddTopicForm,AddOpinionForm
 
 def index(request):
     if request.session.has_key('user_id'):
@@ -90,6 +90,20 @@ def addtopic(request):
     else:
         return HttpResponse("not POST")
     return HttpResponseRedirect(reverse('main:index'))
+
+def addopinion(request):
+    if request.method == 'POST':
+        uid = request.session['user_id']
+        opinion=AddOpinionForm(request.POST)
+        if opinion.is_valid():
+            top=Topic.objects.get(pk=opinion.cleaned_data.get('topic'))
+            p=Opinion(user=Users.objects.get(pk=uid),opinion_text=opinion.cleaned_data.get('opinion_text'),topic=top)
+            p.save()
+        else:
+            return HttpResponse("Form not valid")
+    else:
+        return HttpResponse("not POST")
+    return HttpResponseRedirect(reverse('main:topic', args=(opinion.cleaned_data.get('topic'))))
 
 class TopicView(generic.DetailView):
 	model = Topic

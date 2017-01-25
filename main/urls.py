@@ -29,6 +29,9 @@ urlpatterns = [
     #url to Enter a new Topic:
     url(r'^add_topic$', views.addtopic, name='addtopic'),
 
+    #url to Enter a new Topic:
+    url(r'^add_opinion$', views.addopinion, name='addopinion'),
+
     #url to topic page:
     url(r'^(?P<pk>[0-9]+)/topic$', views.TopicView.as_view(), name='topic'),
 
