@@ -2,6 +2,7 @@ from django.shortcuts import render,get_object_or_404
 from django.core.exceptions import ObjectDoesNotExist #This may be used instead of Users.DoesNotExist
 from django.http import HttpResponse,HttpResponseRedirect
 from django.views import generic
+import re
 
 from django.urls import reverse
 #for older versoins of Django use:
@@ -32,11 +33,15 @@ def search(request):
     if request.method == 'POST':
         topic=AddTopicForm(request.POST)
         if topic.is_valid():
-            try:
-                t=Topic.objects.get(topic_text=topic.cleaned_data.get('topic_text'))
-                return render(request, 'Temp/Topic.html', {'t':t})
-            except Topic.DoesNotExist:
-                return HttpResponse("Topic Not Found")
+
+            #t=Topic.objects.get(topic_text=topic.cleaned_data.get('topic_text'))
+            top_li = Topic.objects.all()
+            li=[]
+            for t in top_li:
+                if re.search(topic.cleaned_data.get('topic_text'),t.topic_text,re.IGNORECASE):
+                    li.append(t)
+
+            return render(request, 'Temp/searchresults.html', {"list": li})
         else:
             return HttpResponse("Form not valid")
     else:
