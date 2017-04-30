@@ -4,16 +4,16 @@
 
 <head>
 
-   <meta charset="utf-8">
-		<title>TheTalkSquare</title>
-		<meta name="generator" content="Bootply" />
-		<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
-		<!--[if lt IE 9]>
+    <meta charset="utf-8">
+    <title>TheTalkSquare</title>
+    <meta name="generator" content="Bootply"/>
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <!--[if lt IE 9]>
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-		<link href="{% static 'css/styles.css' %}" rel="stylesheet">
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet">
 
-		 <meta charset="utf-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -24,67 +24,129 @@
 
     <!-- Custom CSS -->
     <link href="{% static 'css/stylish-portfolio.css' %}" rel="stylesheet">
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "70%";
+            // document.getElementById("flipkart-navbar").style.width = "50%";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.body.style.backgroundColor = "rgba(0,0,0,0)";
+        }
+    </script>
 
 </head>
 <body>
-<br><br><br>
+<body>
 
-<div class="container jumbotron">
-    <h2 align="center">{{ t.topic_text }} <i>by:{{ t.user.user_name }}</i></h2>
 
-    <br><br>
-    <ul>
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<div id="flipkart-navbar" style="background: #576396">
+    <div class="container">
+        <div class="row row1" style="margin-top: 20px;padding-bottom:20px">
+            <div class="col-sm-3">
+                <h2 style="margin:0px;"><span class="smallnav menu" onclick="openNav()">☰ TheTalkSquare</span></h2>
+                <h1 style="margin:0px;"><span class="largenav" style="padding-top:20px;color: #fff">TheTalkSquare</span></h1>
+            </div>
+            <div class="flipkart-navbar-search smallsearch col-sm-7">
+                <div class="row">
+
+                    <form class="form" method="POST" action="{% url 'main:search' %}"><!--Not applied yet -->
+                        {% csrf_token %}
+                        <input style="color:#000" class="flipkart-navbar-input col-xs-11" name="topic_text" type=""
+                           placeholder="Search topics" required>
+                        <button class="flipkart-navbar-button col-xs-1">
+                            <svg width="15px" height="15px">
+                                <path d="M11.618 9.897l4.224 4.212c.092.09.1.23.02.312l-1.464 1.46c-.08.08-.222.072-.314-.02L9.868 11.66M6.486 10.9c-2.42 0-4.38-1.955-4.38-4.367 0-2.413 1.96-4.37 4.38-4.37s4.38 1.957 4.38 4.37c0 2.412-1.96 4.368-4.38 4.368m0-10.834C2.904.066 0 2.96 0 6.533 0 10.105 2.904 13 6.486 13s6.487-2.895 6.487-6.467c0-3.572-2.905-6.467-6.487-6.467 "></path>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-sm-1">
+                <ul style="padding-top:5px;list-style:none">
+                    {% if request.session.user_id %}
+                    <li><h4 style="font-size: 15px;font-weight: bolder"> {{ user_id.user_name }}</h4> </li>
+                    {% endif %}
+                </ul>
+            </div>
+            <div class="col-sm-1">
+                <ul style="padding-top:5px;list-style:none">
+                    {% if request.session.user_id %}
+                    <li><a style="font-size: 15px;font-weight: bolder" href="{% url 'login:logout' %}" class="btn btn-warning">Log Out</a></li>
+                    {% else %}
+                    <li><a style="font-size: 15px;font-weight: bolder" href="{% url 'login:login' %}" class="btn btn-warning">Log In</a></li>
+                    {% endif %}
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<div class="container"  style="background: #eeeeee">
+    <div class="container" >
+        <h2><b>{{ t.topic_text }}</b></h2>
+        <h5><b>{{ t.user.user_name }}</b></h5>
+        {% if t.tag_set.all %}
+            {% for i in t.tag_set.all %}
+                <a href=""><span
+                        class="badge badge-info">
+
+                {{ i.tag_name }}
+                </span>
+                </a>
+            {% endfor %}
+        {% else %}
+            No Tags
+        {% endif %}
+<div><br></div>
+
+            <div  style="width: 1100px;font-size: 16px;font-weight: bold">
+
+                {{ t.topic_desc }}
+        </div>
+
+    </div>
+
+    <ul style="list-style-type: none;padding: 40px 10px ;border-bottom: 3px solid white">
         {% if t.opinion_set.all %}
             {% for i in t.opinion_set.all %}
-                <li>{{ i.opinion_text }}<i><br>by:{{ i.user.user_name }}</i></li>
+                <li style="background: #fff;padding: 10px;border-radius:5px;margin-bottom: 10px"><b>{{ i.opinion_text }}</b><i><br>By:{{ i.user.user_name }}</i></li>
             {% endfor %}
         {% else %}
             <li>No opinions on this topic yet.
         {% endif %}
     </ul>
 
+ {% if request.session.user_id %}
+<h4>Comment Sectoion : </h4>
     <div class="modal-body">
-      <form class="form" method="POST" action="{% url 'main:addopinion' %}" >
-        {% csrf_token %}
+        <form class="form" method="POST" action="{% url 'main:addopinion' %}">
+            {% csrf_token %}
 
-          <div class="row">
-        <div class="form-group col-sm-10">
-          <input type="text" class="form-control input-lg" name="opinion_text" placeholder="Give your valuable opinion here:" required>
-        </div>
+            <div class="row">
+                <div class="form-group col-sm-10">
+                    <textarea type="text"  name="opinion_text" rows="5"  class="form-control"
+                           placeholder="Give your valuable opinion here:" required >
+                        </textarea>
+                </div>
 
-        <div class="form-group col-sm-2">
-          <button class="btn btn-warning btn-lg btn-block">Add opinion</button>
-        </div>
-              <input name="topic" value="{{ t.id }}" style="visibility: hidden">
-        </div>
-      </form>
+                <div class="form-group col-sm-2">
+                    <button class="btn btn-success">Add opinion</button>
+                </div>
+                <input name="topic" value="{{ t.id }}" style="visibility: hidden">
+            </div>
+        </form>
     </div>
 </div>
+{% else %}
+<h4>Log-In to give your opinion: <a style="font-size: 15px;font-weight: bolder" href="{% url 'login:login' %}" class="btn btn-warning">Log In</a></h4>
+{% endif %}
 
-<!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h3> <b> FOR ANY PROBLEMS CONTACT: </b><br>
-                        Sebin Duke Stephan
-                    </h3>
-                    <ul class="list-unstyled">
-                        <li><i class="fa fa-phone fa-fw"></i>+91 9868075098</li>
-                        <li><i class="fa fa-envelope-o fa-fw"></i>
-			<a href="mailto:sebindukestephan@gmail.com">sebindukestephan@gmail.com</a>
-                        </li>
-                    </ul>
-                    <br>
-                    <hr class="small">
-                    <p class="text-muted">Copyright &copy; TheTalkSquare </p>
-                </div>
-            </div>
-        </div>
-        <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
-    </footer>
-
-
-
+<script type="text/javascript"
+        src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5892d5e98848c5c0"></script>
 </body>
 </html>

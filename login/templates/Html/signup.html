@@ -36,7 +36,7 @@
           <h1 class="text-center">Sign-Up</h1>
       </div>
       <div class="modal-body">
-          <form class="form col-md-12 center-block" method="POST" action="{% url 'main:register_user' %}">
+          <form class="form col-md-12 center-block" method="POST" action="{% url 'login:register_user' %}">
 			{% csrf_token %} 
 	    <div class="form-group">
               <input type="text" class="form-control input-lg" name="username" placeholder="User-Name" required>
